@@ -1,14 +1,24 @@
 {
-	"version": "2.0.0",
-	"tasks": [
-		{
-			"label": "probe-servers",
-			"type": "shell",
-			"command": "/bin/zsh",
-			"args": [
-				"-lc",
-				"echo 'Backend:' && curl -s http://127.0.0.1:5000/health && echo '\\nFrontend:' && curl -s -o /dev/null -w \"%{http_code}\\n\" http://localhost:3000"
-			]
-		}
-	]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Sync: commit & push",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "chmod +x scripts/auto-commit.sh && scripts/auto-commit.sh 'chore: workspace sync'"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "probe-servers",
+      "type": "shell",
+      "command": "/bin/zsh",
+      "args": [
+        "-lc",
+        "echo 'Backend:' && curl -s http://127.0.0.1:5000/health && echo '\nFrontend:' && curl -s -o /dev/null -w '%{http_code}\n' http://localhost:3000"
+      ]
+    }
+  ]
 }
