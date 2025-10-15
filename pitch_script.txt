@@ -1,0 +1,16 @@
+2-minute pitch script for OctoSense
+
+[0:00 - 0:10] Opening visual: video or motion map showing flooded streets
+Voiceover: "Every year, floods displace millions. Early detection saves lives."
+
+[0:11 - 0:30] Introduce product
+Voiceover: "OctoSense is an AI-powered flood early-warning and relief coordination prototype — built as an accessible web app so communities can get alerts and coordinate help immediately."
+
+[0:31 - 1:10] Demo (show dashboard)
+Voiceover: "Our map shows risk zones — green, yellow, red — based on rainfall and humidity data. Community members can report rising water, and an AI assistant gives immediate safety guidance."
+
+[1:11 - 1:40] Technical note
+Voiceover: "For this hackathon prototype we used free data and a deterministic AI model to simulate predictive behavior. Production would integrate satellite and weather feeds and a trained ML model."
+
+[1:41 - 2:00] Closing / call to action
+Voiceover: "OctoSense demonstrates a low-cost, scalable approach to early warning that can be deployed quickly to protect communities. We’re ready to expand this with partners and real data sources. Thank you."
