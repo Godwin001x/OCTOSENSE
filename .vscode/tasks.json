@@ -1,24 +1,57 @@
 {
-  "version": "2.0.0",
-  "tasks": [
-    {
-      "label": "Sync: commit & push",
-      "type": "shell",
-      "command": "bash",
-      "args": [
-        "-lc",
-        "chmod +x scripts/auto-commit.sh && scripts/auto-commit.sh 'chore: workspace sync'"
-      ],
-      "problemMatcher": []
-    },
-    {
-      "label": "probe-servers",
-      "type": "shell",
-      "command": "/bin/zsh",
-      "args": [
-        "-lc",
-        "echo 'Backend:' && curl -s http://127.0.0.1:5000/health && echo '\nFrontend:' && curl -s -o /dev/null -w '%{http_code}\n' http://localhost:3000"
-      ]
-    }
-  ]
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Sync: commit & push",
+			"type": "shell",
+			"command": "bash",
+			"args": [
+				"-lc",
+				"chmod +x scripts/auto-commit.sh && scripts/auto-commit.sh 'chore: workspace sync'"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "probe-servers",
+			"type": "shell",
+			"command": "/bin/zsh",
+			"args": [
+				"-lc",
+				"bash scripts/probe_servers.sh"
+			]
+		},
+		{
+			"label": "probe-servers-full",
+			"type": "shell",
+			"command": "/bin/zsh",
+			"args": [
+				"-lc",
+				"bash scripts/probe_servers_full.sh"
+			]
+		},
+		{
+			"label": "probe-servers-full",
+			"type": "shell",
+			"command": "/bin/zsh",
+			"args": [
+				"-lc",
+				"bash scripts/probe_servers_full.sh"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "probe-servers",
+			"type": "shell",
+			"command": "/bin/zsh",
+			"args": [
+				"-lc",
+				"bash scripts/probe_servers.sh"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
 }
